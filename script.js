@@ -33,7 +33,6 @@ function newQuote() {
 }
 
 function tweetQuote() {
-  loading();
   const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
   window.open(twitterUrl, "_blank");
 }
@@ -42,6 +41,7 @@ newQuoteBtn.addEventListener("click", newQuote);
 twitterBtn.addEventListener("click", tweetQuote);
 
 async function getQuotes() {
+  loading();
   const apiUrl = "https://type.fit/api/quotes";
 
   try {
