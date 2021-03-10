@@ -55,5 +55,5 @@ async function getQuotes() {
 }
 
 // On Load
-loading();
+// loading();
 getQuotes();
